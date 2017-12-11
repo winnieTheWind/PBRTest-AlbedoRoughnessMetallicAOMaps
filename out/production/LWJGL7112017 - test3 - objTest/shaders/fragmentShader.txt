@@ -1,0 +1,13 @@
+
+#version 330
+uniform sampler2D modelTexture;
+
+in vec3 colour;
+in vec2 pass_textureCoordinates;
+
+//use your own output instead of gl_FragColor
+out vec4 out_Color;
+
+void main() {
+out_Color = texture(modelTexture,pass_textureCoordinates);
+}
